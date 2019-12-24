@@ -1,7 +1,7 @@
 (ns armstrong-numbers)
 
 (defn armstrong? [num]
-  (let [digit-strs (->> num str (map str))
+  (let [digit-strs (map str (str num))
         digits     (map #(Integer/parseInt %) digit-strs)
         num-digits (count digits)]
     (== num
