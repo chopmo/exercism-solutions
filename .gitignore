@@ -1,0 +1,17 @@
+/target
+/classes
+/checkouts
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-env
+/profiles.clj
+.lein-failures
+.lein-repl-history
+/.nrepl-port
+.hgignore
+.hg/
+/tmp
+spoof.edn
+*~
