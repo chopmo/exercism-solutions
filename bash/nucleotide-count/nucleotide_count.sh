@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-declare -i a=0 c=0 g=0 t=0
+declare -i A=0 C=0 G=0 T=0
 
 if [[ $1 =~ [^ACGT] ]]; then
   echo "Invalid nucleotide in strand"
@@ -8,15 +8,12 @@ if [[ $1 =~ [^ACGT] ]]; then
 fi
 
 for (( i=0; i<${#1}; i++ )); do
-  case ${1:$i:1} in
-    A) (( a++ ));;
-    C) (( c++ ));;
-    G) (( g++ ));;
-    T) (( t++ ));;
-  esac
+  (( ${1:$i:1}++ ))
 done
 
-echo "A: $a"
-echo "C: $c"
-echo "G: $g"
-echo "T: $t"
+echo "\
+A: $A
+C: $C
+G: $G
+T: $T
+"
